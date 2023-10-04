@@ -118,6 +118,9 @@
 }
 
 @media screen and (max-width: 576px) {
+  .wrapper {
+    width: 100%;
+  }
   .row {
     &.active {
       position: fixed;
@@ -133,6 +136,12 @@
         justify-content: center;
         align-items: center;
         gap: 2rem;
+      }
+    }
+
+    &__nav {
+      a:hover::after {
+        display: none;
       }
     }
   }
