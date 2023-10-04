@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+
+import { useScrollLock } from '../../hooks/useScrollLock';
 
 import { Like } from '../../images/svg/Like';
 import { Cart } from '../../images/svg/Cart';
@@ -17,9 +19,19 @@ const navItem = [
 export const Header = () => {
   const [showNav, setShowNav] = useState(false);
 
+  const [lockScroll, unlockScroll] = useScrollLock();
+
+  useEffect(() => {
+    if (showNav) {
+      lockScroll();
+    } else {
+      unlockScroll();
+    }
+  }, [showNav, lockScroll, unlockScroll]);
+
   return (
-    <header className={s.wrapper}>
-      <div className={`${s.row} ${showNav ? s.active : ''}`}>
+    <header className={`${s.wrapper} ${showNav ? s.active : ''}`}>
+      <div className={s.row}>
         <div className={s.row__logo}>
           <Like className={s.like} width="20" height="20" />
           <h3 className={s.logo}>DeiIied</h3>
@@ -39,7 +51,9 @@ export const Header = () => {
         </div>
         <nav className={s.row__nav}>
           {navItem.map((i) => (
-            <a href={i.href}>{i.title}</a>
+            <a key={i.href} href={i.href}>
+              {i.title}
+            </a>
           ))}
         </nav>
       </div>
