@@ -13,7 +13,7 @@ export const Intro = () => {
               The furniture brand for the future, with timeless designs
             </h1>
             <div className={s.content__row}>
-              <a href="/#" className={s.content__btn}>
+              <a href="/#" className={`${s.content__btn} btn`}>
                 View collection
               </a>
               <p className={s.content__descr}>

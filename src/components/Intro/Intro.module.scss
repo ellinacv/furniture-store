@@ -22,7 +22,7 @@
 
   &__title {
     margin-bottom: 2.5rem;
-    max-width: 80%;
+    width: clamp(346px, 30rem, 80%);
     font-size: 2rem;
     font-family: var(--font-main);
   }
@@ -34,19 +34,7 @@
   }
 
   &__btn {
-    display: inline-block;
-    padding: 1rem 2rem;
     align-self: flex-start;
-
-    background-color: rgba(249, 249, 249, 0.15);
-    font-size: 1rem;
-    color: var(--white);
-
-    transition: all 0.3s;
-
-    &:hover {
-      filter: brightness(70%);
-    }
   }
 
   &__descr {
@@ -84,7 +72,6 @@
 
     &__btn {
       align-self: normal;
-      text-align: center;
     }
 
     &__image {

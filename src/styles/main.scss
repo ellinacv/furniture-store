@@ -30,3 +30,18 @@ body {
   line-height: 140%;
   color: var(--white);
 }
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: rgba(249, 249, 249, 0.15);
+  font-size: 1rem;
+  text-align: center;
+  color: var(--white);
+
+  transition: all 0.3s;
+
+  &:hover {
+    filter: brightness(70%);
+  }
+}
