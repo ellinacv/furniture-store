@@ -25,6 +25,12 @@
     position: relative;
     justify-self: center;
 
+    &__text {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     &__img {
       position: relative;
       margin-bottom: 1.5rem;
@@ -35,6 +41,27 @@
       margin-bottom: 0.5rem;
       font-size: 1.25rem;
       line-height: 1.4;
+    }
+
+    &__btn {
+      margin-right: 1rem;
+      padding: 0.3rem;
+      border: 1px solid var(--primary);
+      opacity: 0.7;
+      border-radius: 10px;
+      transition: all 0.3s ease-in-out;
+
+      svg {
+        display: block;
+        path {
+          color: var(--primary);
+        }
+      }
+
+      &:hover {
+        opacity: 0.9;
+        transform: scale(1.2);
+      }
     }
 
     .like {

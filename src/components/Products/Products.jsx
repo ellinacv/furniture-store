@@ -8,6 +8,7 @@ import card4 from '../../images/products/card_04.jpg';
 import card5 from '../../images/products/card_05.jpg';
 
 import { Like } from '../../images/svg/Like';
+import { Plus } from '../../images/svg/Plus';
 
 const cards = [
   {
@@ -64,8 +65,15 @@ export const Products = () => {
                 <img src={card.image} alt={card.title} />
                 <Like className={s.like} color="white" />
               </div>
-              <h5>{card.title}</h5>
-              <span>{card.price} $</span>
+              <div className={s.cards__item__text}>
+                <div>
+                  <h5>{card.title}</h5>
+                  <span>{card.price} $</span>
+                </div>
+                <button className={s.cards__item__btn}>
+                  <Plus width="18" />
+                </button>
+              </div>
             </div>
           ))}
         </div>
