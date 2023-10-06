@@ -25,6 +25,8 @@
     width: clamp(346px, 30rem, 80%);
     font-size: 2rem;
     font-family: var(--font-main);
+
+    color: var(--white);
   }
 
   &__row {
@@ -54,11 +56,13 @@
 @media screen and (max-width: 768px) {
   .wrap {
     margin-top: 0;
+    padding: 40px 0 24px;
+    background-color: var(--primary);
   }
   .content {
     &__text {
       width: 100%;
-      padding: 2.5rem 1.5rem;
+      padding: 0 0.5rem;
     }
 
     &__title {
