@@ -1,0 +1,67 @@
+.wrap {
+  width: 100%;
+  padding: 5rem 0;
+}
+
+.title {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.cards {
+  width: 100%;
+  margin-bottom: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 1.25rem;
+  row-gap: 2rem;
+
+  @media screen and (max-width: 390px) {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
+  }
+
+  &__item {
+    position: relative;
+    justify-self: center;
+
+    &__img {
+      position: relative;
+      margin-bottom: 1.5rem;
+      max-width: 300px;
+    }
+
+    h5 {
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+
+    .like {
+      display: inline-block;
+      width: 24px;
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      z-index: 2;
+
+      &:hover {
+        fill: var(--white);
+      }
+
+      &:active {
+        color: var(--primary);
+        fill: var(--primary);
+      }
+    }
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  a {
+    color: var(--primary);
+    background-color: var(--light-grey);
+  }
+}
